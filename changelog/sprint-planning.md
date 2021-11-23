@@ -9,10 +9,17 @@
 | 140810200044  | Ade Dwi Fatwa Sembiring |
 
 ## Sprint Backlog Keseluruhan 
-| ID  | Title/Desc | Asignee | 
-| --- | ---------- | ------- | 
-| 1.1 | Preparing the x | Jane Doe | 
-| 2.2 | Make the x | John Doe | 
+| ID  | Title/Desc                                | Asignee  | 
+| --- | ----------------------------------------- | -------  | 
+| 1.1 | Menyiapkan github (gatau dah)             | Anggie   | 
+| 2.2 | Membuat Grid ubin 9x9 dan 3x3             | John Doe | 
+| 3.3 | Membuat tampilan menu                     | John Doe |
+| 4.4 | Membuat interface (tombol level & start)  | John Doe |
+| 5.5 | Membuat level kesulitan                   | John Doe |
+| 6.6 | Membuat reset & restart                   | John Doe |
+| 7.7 | Pengecekan input                          | John Doe |
+| 8.8 | Membuat fungsi highlight pada nilai yg sm | John Doe |
+| 9.9 | Pengecekan akhir                          | John Doe |
 
 ## Sprint Backlog Plan (Sprint 1)
 | ID  | Title/Desc | Asignee | 
