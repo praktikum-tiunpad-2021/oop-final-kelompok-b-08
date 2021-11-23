@@ -1,7 +1,7 @@
 # Challenge Guidelines
 
 A. Deskripsi masalah
-- Nama main file adalah ‘Sudoku’ (Contoh command: java Sudoku)
+- Nama main file adalah ‘Sudoku’ (Contoh command: java Sudoku) 
 - Ketika dijalankan, program akan membentuk (9 x 9) grid ubin dengan (3 x 3) sub-grids
 - Setiap ubin berisi angka 1 - 9, kemudian ada beberapa ubin yang ditampilkan berisi string kosong (mask)
 - Secara default akan menampilkan 4x9 (36) ubin yang telah berisi angka (tidak dimasking). 

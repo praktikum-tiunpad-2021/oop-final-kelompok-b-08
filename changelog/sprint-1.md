@@ -1,5 +1,5 @@
 # Scrum Report (Sprint 1)
-| From dd/mm/yyyy to dd/mm/yyyy
+| From 17/11/2021 to 23/11/2021
 
 ## Team (Insert your name)
 | NPM           | Name                    |
@@ -11,21 +11,23 @@
 ## Sprint Overview
 | Planned (n)   | Completed (n) |
 | ------------- |-------------- |
-| n             | n             |
+| 2             | 2             |
 
 ## Sprint 1 Backlog
 
-| ID  | Title/Desc | Asignee | Status |
-| --- | ---------- | ------- | ------ |
-| 1.1 | Preparing the x | Jane Doe | DONE |
-| 1.2 | Make the x | John Doe | FAILED |
+| ID  | Title/Desc                                | Asignee             | 
+| --- | ----------------------------------------- | ------------------- | 
+| 1.1 | Membuat Grid ubin 9x9 dan 3x3             | Anggie, Ananda, Ade | 
+| 2.2 | Membuat tampilan menu                     | Anggie, Ananda, Ade |
+
 
 ## Retrospective 
 
-Sprint kemarin dianggap terlalu sedikit sehingga diperlukan adanya penyesuaian tugas. Lorem ipsum dolor sit amet
+Sprint kemarin dianggap terlalu sedikit sehingga diperlukan adanya penyesuaian tugas. 
 
 ## Next Sprint Backlog (Sprint 2)
-| ID  | Title/Desc | Asignee | 
-| --- | ---------- | ------- | 
-| 2.1 | Preparing the x | Jane Doe | 
-| 2.2 | Make the x | John Doe | 
+| ID  | Title/Desc                                                  | Asignee             | 
+| --- | ----------------------------------------------------------- | ------------------- | 
+| 3.3 | Membuat interface (new game,cek,mouselistener,keylistener)  | John Doe            |
+| 4.4 | Membuat level kesulitan                                     | John Doe            |
+| 5.5 | Membuat newgame/reset & restart                             | John Doe            |
