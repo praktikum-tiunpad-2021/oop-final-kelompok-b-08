@@ -2,20 +2,29 @@ package sudoku;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import javax.swing.BorderFactory;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+import javax.swing.Timer;
 
 public class Tampilan extends javax.swing.JPanel {
     Sudoku game;
     private static JTextField[][] boxes;
     private JPanel[][] panels;
     private JPanel center, bPanel;
-    private JButton hardBtn, medBtn, easyBtn;
+    private JButton hardBtn, medBtn, easyBtn, eBtn;
     private int[][] temp = new int[9][9];
     private int[][] grid = new int[9][9];
 
@@ -69,6 +78,16 @@ public class Tampilan extends javax.swing.JPanel {
         bPanel.setBorder(BorderFactory.createLineBorder(Color.black, 6, true));
         bPanel.setLayout(new GridLayout(4, 3, 0, 20)); 
         
+        eBtn = new JButton("Exit");
+
+        eBtn.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+
         /* PANEL UNTUK MODE HARD */
         easyBtn = new JButton("Hard");
 
@@ -76,38 +95,37 @@ public class Tampilan extends javax.swing.JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 restgame();
-                // Sudoku.setlevel(4);
-            //       Sudoku.newGame();
+                Sudoku.setlevel(4);
+                Sudoku.newGame();
             }
         });
         /* PANEL UNTUK MODE MEDIUM */
         medBtn = new JButton("Medium");
-
         medBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 restgame();
-                // Sudoku.setlevel(3);
-        //        Sudoku.newGame();
+                Sudoku.setlevel(3);
+                Sudoku.newGame();
 
             }
         });
 
         /* PANEL UNTUK MODE EASY */
         hardBtn = new JButton("Easy");
-
         hardBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 restgame();
-                // Sudoku.setlevel(2);
-            //       Sudoku.newGame();
+                Sudoku.setlevel(2);
+                Sudoku.newGame();
             }
         });
 
         bPanel.add(hardBtn);   //add new game button to 
         bPanel.add(medBtn);
         bPanel.add(easyBtn);
+        bPanel.add(eBtn);
 
         add(bPanel, "South");
     }
@@ -148,5 +166,9 @@ public class Tampilan extends javax.swing.JPanel {
                 boxes[i][j].setBackground(Color.WHITE);
             }
         }
+    }
+
+    public static void setlevel(int lev) {
+        level = lev;
     }
 }
