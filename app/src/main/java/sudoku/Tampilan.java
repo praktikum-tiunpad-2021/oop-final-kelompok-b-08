@@ -31,7 +31,48 @@ public class Tampilan extends javax.swing.JPanel {
     public JTextField newtextfield() {
         JTextField j = new JTextField("");
         j.setBorder(BorderFactory.createLineBorder(Color.lightGray));
+        j.setFont(new Font(Font.DIALOG, Font.PLAIN, 25));
         j.setHorizontalAlignment(JTextField.CENTER);
+        // MOUSE LISTENER
+        j.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                if (j.isEditable()) {
+                    ((JTextField) e.getSource()).setBorder(BorderFactory.createLineBorder(Color.decode("#f6ea80")));
+                    ((JTextField) e.getSource()).setBackground(Color.decode("#f6ea80"));
+                }
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                if (j.isEditable()) {
+                    ((JTextField) e.getSource()).setBorder(BorderFactory.createLineBorder(Color.lightGray));
+                    ((JTextField) e.getSource()).setBackground(Color.white);
+                }
+            }
+        });
+
+        //==============================================
+
+        j.addKeyListener(new KeyListener() {
+
+            @Override
+            public void keyTyped(KeyEvent e) {
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                if (j.isEditable()) {
+                    ((JTextField) e.getSource()).setForeground(Color.decode("#0c4"));
+                } else {
+                    ((JTextField) e.getSource()).setForeground(Color.black);
+                }
+            }
+        });
         return j;
     }
 
