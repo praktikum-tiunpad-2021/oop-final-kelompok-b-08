@@ -117,6 +117,19 @@ public class Tampilan extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
 
+    public void setTextLable() {
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (this.temp[i][j] != 0) {
+                    boxes[i][j].setText(String.valueOf(this.temp[i][j]));
+                    boxes[i][j].setEditable(false);
+                    boxes[i][j].setBackground(Color.decode("#C0DCC0"));
+                } else {
+                    boxes[i][j].setText("");
+                }
+            }
+        }
+    }
     
     public void setarray(int[][] grid, int[][] temp) {
         for (int i = 0; i < 9; i++) {
