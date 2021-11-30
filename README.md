@@ -45,8 +45,7 @@ TO;DO with steps
 ## Classes Used
 
 TO;DO
-
-UML image here
+(oop-final-kelompok-b-08\app\src\main\resources\UML.png)
 
 ## Notable Assumption and Design App Details
 

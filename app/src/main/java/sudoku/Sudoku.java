@@ -19,7 +19,7 @@ public class Sudoku {
         temp = new int[9][9];
         frame = new JFrame();
         frame.setResizable(false);
-        frame.setLocation(320, 40);
+        frame.setLocation(640, 200);
         frame.setSize(650, 650);
         frame.setTitle("SUDOKU Project PBO");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -172,5 +172,8 @@ public class Sudoku {
         }
         Collections.shuffle(numbers);
         return numbers;
+    }
+     public static void setlevel(int lev) {
+        level = lev;
     }
 }

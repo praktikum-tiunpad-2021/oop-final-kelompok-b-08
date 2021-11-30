@@ -12,15 +12,12 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JPasswordField;
 import javax.swing.JTextField;
-import javax.swing.Timer;
+
 
 public class Tampilan extends javax.swing.JPanel {
-    Sudoku game;
+
     private static JTextField[][] boxes;
     private JPanel[][] panels;
     private JPanel center, bPanel;
@@ -38,8 +35,8 @@ public class Tampilan extends javax.swing.JPanel {
             @Override
             public void mouseEntered(MouseEvent e) {
                 if (j.isEditable()) {
-                    ((JTextField) e.getSource()).setBorder(BorderFactory.createLineBorder(Color.decode("#f6ea80")));
-                    ((JTextField) e.getSource()).setBackground(Color.decode("#f6ea80"));
+                    ((JTextField) e.getSource()).setBorder(BorderFactory.createLineBorder(Color.decode("#fff0f3")));
+                    ((JTextField) e.getSource()).setBackground(Color.decode("#fff0f3"));
                 }
             }
 
@@ -163,7 +160,8 @@ public class Tampilan extends javax.swing.JPanel {
             }
         });
 
-        bPanel.add(hardBtn);   //add new game button to 
+        // add new game button to 
+        bPanel.add(hardBtn);   
         bPanel.add(medBtn);
         bPanel.add(easyBtn);
         bPanel.add(eBtn);
@@ -173,7 +171,7 @@ public class Tampilan extends javax.swing.JPanel {
            
     private void initComponents() {
         setLayout(null);
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
 
     public void setTextLable() {
@@ -209,7 +207,4 @@ public class Tampilan extends javax.swing.JPanel {
         }
     }
 
-    public static void setlevel(int lev) {
-        level = lev;
-    }
 }
