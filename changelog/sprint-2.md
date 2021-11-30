@@ -24,18 +24,8 @@
 
 ## Retrospective 
 
-interface cek belum dibuat
-=======
-| ID  | Title/Desc                                                  | Asignee             | Status              |
-| --- | ----------------------------------------------------------- | ------------------- | ------------------- |
-| 2.1 | Membuat interface (new game,cek,mouselistener,keylistener)  | Anggie              |    3/4 terpenuhi    |
-| 2.2 | Membuat level kesulitan                                     | Ade                 |     terpenuhi       |
-| 2.3 | Membuat reset & restart                                     | Ananda              |     terpenuhi       |
-
-## Retrospective 
-
 Cek pada ID 2.1 belum terpenuhi
->>>>>>> a4d74214a336d5e3d4118b6f56cbb2688eddbdb0
+
 
 ## Next Sprint Backlog (Sprint 3)
 | ID  | Title/Desc                                                  | Asignee             | 
