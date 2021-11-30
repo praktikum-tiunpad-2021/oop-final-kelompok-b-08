@@ -45,9 +45,10 @@ TO;DO with steps
 ## Classes Used
 
 TO;DO
-(oop-final-kelompok-b-08\app\src\main\resources\UML.png)
+
 
 ## Notable Assumption and Design App Details
 
-TO;DO
+UML :
+
 ![alt text](https://github.com/praktikum-tiunpad-2021/oop-final-kelompok-b-08/blob/master/app/src/main/resources/UML.png)
