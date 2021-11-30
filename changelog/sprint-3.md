@@ -11,14 +11,15 @@
 ## Sprint Overview
 | Planned (n)   | Completed (n) |
 | ------------- |-------------- |
-| n             | n             |
+| 3             | 0             |
 
 ## Sprint 3 Backlog
 
-| ID  | Title/Desc | Asignee | Status |
-| --- | ---------- | ------- | ------ |
-| 3.1 | Preparing the x | Jane Doe | DONE |
-| 3.2 | Make the x | John Doe | FAILED |
+| ID  | Title/Desc                                                  | Asignee             | 
+| --- | ----------------------------------------------------------- | ------------------- | 
+| 3.1 | Fiksasi GUI (menu)                                          | Anggie              |
+| 3.2 | Membuat fungsi highlight pada nilai yg sm                   | Ade                 |
+| 3.3 | Pengecekan akhir                                            | Ananda              |
 
 ## Retrospective 
 
