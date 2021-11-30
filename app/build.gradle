@@ -10,7 +10,7 @@ plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
     id 'distribution'
-    id 'org.openjfx.javafxplugin' version '0.0.10'
+    //id 'org.openjfx.javafxplugin' version '0.0.10'
 }
 
 repositories {
@@ -31,8 +31,8 @@ application {
     mainClass = 'sudoku.App'
 }
 
-javafx {
+/*javafx {
     version = "16.0.2"
     modules = [ 'javafx.controls','javafx.fxml' ]
     //.controls buat button, fxml buat ngedeklarasiin UI atau css
-}
+}*/
