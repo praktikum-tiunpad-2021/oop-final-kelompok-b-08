@@ -1,7 +1,7 @@
 # Scrum Report (Sprint 3)
-| From dd/mm/yyyy to dd/mm/yyyy
+| From 01/12/2021 to 07/12/2021
 
-## Team (Insert your name)
+## Team 
 | NPM           | Name                    |
 | ------------- |-------------------------|
 | 140810200008  | Anggie Forestry         |
