@@ -51,3 +51,4 @@ UML image here
 ## Notable Assumption and Design App Details
 
 TO;DO
+![alt text](https://github.com/praktikum-tiunpad-2021/oop-final-kelompok-b-08/blob/master/app/src/main/resources/UML.png)
