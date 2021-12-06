@@ -173,4 +173,8 @@ public class Sudoku {
         Collections.shuffle(numbers);
         return numbers;
     }
+
+    public static void setlevel(int lev) {
+        level = lev;
+    }
 }

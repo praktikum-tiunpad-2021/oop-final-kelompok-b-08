@@ -2,9 +2,14 @@ package sudoku;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -15,7 +20,7 @@ public class Tampilan extends javax.swing.JPanel {
     private static JTextField[][] boxes;
     private JPanel[][] panels;
     private JPanel center, bPanel;
-    private JButton hardBtn, medBtn, easyBtn;
+    private JButton hardBtn, medBtn, easyBtn, resetBtn, eBtn;
     private int[][] temp = new int[9][9];
     private int[][] grid = new int[9][9];
 
@@ -117,8 +122,8 @@ public class Tampilan extends javax.swing.JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 restgame();
-                // Sudoku.setlevel(4);
-            //       Sudoku.newGame();
+                Sudoku.setlevel(4);
+                Sudoku.newGame();
             }
         });
         /* PANEL UNTUK MODE MEDIUM */
@@ -128,8 +133,8 @@ public class Tampilan extends javax.swing.JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 restgame();
-                // Sudoku.setlevel(3);
-        //        Sudoku.newGame();
+                Sudoku.setlevel(3);
+                Sudoku.newGame();
 
             }
         });
@@ -141,14 +146,38 @@ public class Tampilan extends javax.swing.JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 restgame();
-                // Sudoku.setlevel(2);
-            //       Sudoku.newGame();
+                Sudoku.setlevel(2);
+                Sudoku.newGame();
+            }
+        });
+
+        /* PANEL UNTUK RESET */
+        resetBtn = new JButton("Reset");
+
+        resetBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                restgame();
+                Sudoku.newGame();
+            }
+        });
+                
+        /* PANEL UNTUK EXIT */
+        eBtn = new JButton("Exit");
+
+        eBtn.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
             }
         });
 
         bPanel.add(hardBtn);   //add new game button to 
         bPanel.add(medBtn);
         bPanel.add(easyBtn);
+        bPanel.add(eBtn);
+        bPanel.add(resetBtn);
 
         add(bPanel, "South");
     }
