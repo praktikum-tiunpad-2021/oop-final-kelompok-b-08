@@ -79,4 +79,4 @@ This repository is a final project (Java GUI) from Object-Oriented Programming C
    - Apakah nilai yang dimasukan pada ubin sesuai dengan jawaban, jika sesuai maka ubah warna Field menjadi hijau, jika tidak sesuai maka Field menjadi warna merah
    - Highlight ubin yang sudah berisi angka menjadi hijau
 
-![alt text](https://github.com/praktikum-tiunpad-2021/oop-final-kelompok-b-08/blob/master/app/src/main/resources/UML_Sudoku.png)
+![alt text](https://github.com/praktikum-tiunpad-2021/oop-final-kelompok-b-08/blob/master/app/src/main/resources/UML_Sudokuu.jpeg)
