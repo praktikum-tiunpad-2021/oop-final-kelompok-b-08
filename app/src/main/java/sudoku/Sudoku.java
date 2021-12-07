@@ -9,7 +9,7 @@ public class Sudoku {
 
     static JFrame frame;
     static Tampilan p;
-    private  static int[][] grid;
+    private static int[][] grid;
     private static int[][] temp;
     private static Random ran = new Random();
     private static int level = 3;
@@ -107,7 +107,7 @@ public class Sudoku {
                 grid[i][j] = 1;
             }
             // melakukan pemeriksaan
-            if (isAvaible(i, j, grid)) {
+            if (isAvailable(i, j, grid)) {
                 // jika yang free sama dengan k, maka board dikatakan solved (terselesaikan)
                 if (k + 1 == freeCellList.length) {
                     found = true;
@@ -137,7 +137,7 @@ public class Sudoku {
         return true;
     }
 
-    public static boolean isAvaible(int i, int j, int[][] grid) {
+    public static boolean isAvailable(int i, int j, int[][] grid) {
 
         // Melakukan pemeriksaan row
         for (int column = 0; column < 9; column++) {

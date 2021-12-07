@@ -15,12 +15,11 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
-//import javax.swing.Timer;
 import javax.swing.JOptionPane;
 
 
 public class Tampilan extends javax.swing.JPanel {
-    Sudoku game;
+    
     private static JTextField[][] boxes;
     private JPanel[][] panels;
     private JPanel center, bPanel, aPanel;
@@ -28,8 +27,7 @@ public class Tampilan extends javax.swing.JPanel {
     private int[][] temp = new int[9][9];
     private int[][] grid = new int[9][9];
     private int counter = 0;
-    //private Timer timer;
-    // private JLabel label = new JLabel("      Timer :00 : 00 : 00");
+
 
     public JTextField newtextfield() {
         JTextField j = new JTextField("");
@@ -301,12 +299,4 @@ public class Tampilan extends javax.swing.JPanel {
         }
     }
 
-    // private String TimeFormat(int count) {
-
-    //     int hours = count / 3600;
-    //     int minutes = (count - hours * 3600) / 60;
-    //     int seconds = count - minutes * 60;
-
-    //     return String.format("      Timer :" + "%02d", hours) + " : " + String.format("%02d", minutes) + " : " + String.format("%02d", seconds);
-    // }
 }
