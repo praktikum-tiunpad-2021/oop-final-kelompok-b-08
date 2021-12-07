@@ -99,34 +99,34 @@ public class Sudoku {
         boolean found = false;
 
         while (!found) {
-            //get free element one by one
+            // memperoleh elemen free satu per satu
             int i = freeCellList[k][0];
             int j = freeCellList[k][1];
-            // if element equal 0 give 1 to first test
+            // jika elemen sama dengan 0, berikan nilai 1 pada test pertama
             if (grid[i][j] == 0) {
                 grid[i][j] = 1;
             }
-            // now check 1 if is avaible
+            // melakukan pemeriksaan
             if (isAvaible(i, j, grid)) {
-                //if free is equal k ==> board sloved
+                // jika yang free sama dengan k, maka board dikatakan solved (terselesaikan)
                 if (k + 1 == freeCellList.length) {
                     found = true;
                 } else {
                     k++;
                 }
             }
-            //increase element  by 1 
+            // increase elemen dengan 1
             else if (grid[i][j] < 9) {
                 grid[i][j] = grid[i][j] + 1;
             } 
-            //now if element value eqaule 9 backtrack to later element
+            // jika nilai elemen sama dengan 9, lakukan backtrack ke later element
             else {
                 while (grid[i][j] == 9) {
                     grid[i][j] = 0;
                     if (k == 0) {
                         return false;
                     }
-                    k--; //backtrack to later element
+                    k--; // melakukan backtrack ke later element
                     i = freeCellList[k][0];
                     j = freeCellList[k][1];
                 }
@@ -139,22 +139,22 @@ public class Sudoku {
 
     public static boolean isAvaible(int i, int j, int[][] grid) {
 
-        // Check   row
+        // Melakukan pemeriksaan row
         for (int column = 0; column < 9; column++) {
             if (column != j && grid[i][column] == grid[i][j]) {
                 return false;
             }
         }
 
-        // Check  column
+        // Melakukan pemeriksaan baris
         for (int row = 0; row < 9; row++) {
             if (row != i && grid[row][j] == grid[i][j]) {
                 return false;
             }
         }
 
-        // Check box
-        for (int row = (i / 3) * 3; row < (i / 3) * 3 + 3; row++) {//      i=5 ,j=2   || row =3  col=0   ||i=3  j=0
+        // Melakukan pemeriksaan terhadap box
+        for (int row = (i / 3) * 3; row < (i / 3) * 3 + 3; row++) {     // i=5 ,j=2   ||   row =3  col=0   ||   i=3  j=0
             for (int col = (j / 3) * 3; col < (j / 3) * 3 + 3; col++) {
                 if (row != i && col != j && grid[row][col] == grid[i][j]) {
                     return false;
@@ -162,7 +162,7 @@ public class Sudoku {
             }
         }
 
-        return true; //else return true
+        return true;
     }
     
     public static ArrayList<Integer> getRandomNum() {
