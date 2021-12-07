@@ -40,15 +40,43 @@ This repository is a final project (Java GUI) from Object-Oriented Programming C
 
 ## Running The App
 
-TO;DO with steps
+1. Klik tombol "Run Java"
+2. Tombol keyboard yang digunakan pada aplikasi :
+   Tombol 1 - 9
 
 ## Classes Used
 
-TO;DO
-
+1. **Sudoku (program utama)** - 'Sudoku.java'
+   - Program utama yang berisi method main
+   - 6 Method
+     - **newGame()** -> Untuk mereset game
+     - **getFreeCellList()** -> Untuk membuat grid yang di masking
+     - **search()** -> Untuk mencari angka di kotak kosong 
+     - **isAvailable()** -> Untuk memeriksa inputan yang nilainya sama dalam satu kolom/satu baris/satu box 
+     - **getRandomNum()** -> Untuk mendapatkan nilai Random
+     - **setLevel()** -> Untuk mengatur level
+2. **Tampilan** = 'Tampilan.java'
+   - **initComponents()** 
+   - **setTextLable()** -> Untuk pengaturan Label Text   
+   - **setarray()** -> Untuk membuat array
+   - **resetgame()** -> Untuk mereset game
+3. **Listener** = 'Listener.java'
+   - **newtextfield()** -> mengatur tampilan Field
 
 ## Notable Assumption and Design App Details
+- Grid ubin dengan besar 9 x 9 yang terdiri dari 3 x 3 sub-grids dimana ubin adalah komponen drawing board dengan ukuran 650x650 
+- Navbar berisi About dan Help    
+   - Help berisi Instructions untuk menampilkan cara bermain pada sudoku ini    
+   - About berisi Data Pembuat Game       
+- Subgrid yang sudah berisi angka memiliki warna putih
+- Subgrid yang belum berisi angka memiliki warna Putih
+- Acak angka di dalam ubin (tidak ada angka yang sama pada 1 baris, 1 kolom, dan 1 sub-grids). 
+- Masking terhadap ubin tertentu (angka disembunyikan dan dijadikan text field) 
+- Ubin yang tidak dimasking bersifat read-only (angka didalamnya tidak bisa diubah) 
+- Setiap angka yang didahului oleh angka yang lebih besar dianggap sebagai inversi, jumlah inversi dari puzzle harus genap.
+- Buat listener untuk memproses input. Setiap inputan user akan dicek:
+   - Koordinat i dan j dimana inputan tersebut berada
+   - Apakah nilai yang dimasukan pada ubin sesuai dengan jawaban, jika sesuai maka ubah warna Field menjadi hijau, jika tidak sesuai maka Field menjadi warna merah
+   - Highlight ubin yang sudah berisi angka menjadi hijau
 
-UML :
-
-![alt text](https://github.com/praktikum-tiunpad-2021/oop-final-kelompok-b-08/blob/master/app/src/main/resources/UML.png)
+![alt text](https://github.com/praktikum-tiunpad-2021/oop-final-kelompok-b-08/blob/master/app/src/main/resources/UML_Sudoku.png)

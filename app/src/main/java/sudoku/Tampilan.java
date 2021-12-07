@@ -2,17 +2,11 @@ package sudoku;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
-import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
@@ -27,55 +21,6 @@ public class Tampilan extends javax.swing.JPanel {
     private int[][] temp = new int[9][9];
     private int[][] grid = new int[9][9];
     private int counter = 0;
-
-
-    public JTextField newtextfield() {
-        JTextField j = new JTextField("");
-        j.setBorder(BorderFactory.createLineBorder(Color.lightGray));
-        j.setFont(new Font(Font.DIALOG, Font.PLAIN, 25));
-        j.setHorizontalAlignment(JTextField.CENTER);
-        // MOUSE LISTENER
-        j.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                if (j.isEditable()) {
-                    ((JTextField) e.getSource()).setBorder(BorderFactory.createLineBorder(Color.decode("#718355")));
-                    ((JTextField) e.getSource()).setBackground(Color.decode("#cfe1b9"));
-                }
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-                if (j.isEditable()) {
-                    ((JTextField) e.getSource()).setBorder(BorderFactory.createLineBorder(Color.lightGray));
-                    ((JTextField) e.getSource()).setBackground(Color.white);
-                }
-            }
-        });
-
-        //==============================================
-
-        j.addKeyListener(new KeyListener() {
-
-            @Override
-            public void keyTyped(KeyEvent e) {
-            }
-
-            @Override
-            public void keyPressed(KeyEvent e) {
-            }
-
-            @Override
-            public void keyReleased(KeyEvent e) {
-                if (j.isEditable()) {
-                    ((JTextField) e.getSource()).setForeground(Color.decode("#0c4"));
-                } else {
-                    ((JTextField) e.getSource()).setForeground(Color.black);
-                }
-            }
-        });
-        return j;
-    }
 
     public Tampilan() {
         initComponents();
@@ -98,10 +43,12 @@ public class Tampilan extends javax.swing.JPanel {
             }
         }
 
+        Listener listener = new Listener();
+
         /* text field text boxes */
         for (int n = 0; n < 9; n++) {
             for (int i = 0; i < 9; i++) {
-                boxes[n][i] = newtextfield();
+                boxes[n][i] = listener.newtextfield();
                 int fm = (n + 1) / 3;
                 if ((n + 1) % 3 > 0) {
                     fm++;
@@ -132,7 +79,7 @@ public class Tampilan extends javax.swing.JPanel {
         easyBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                restgame();
+                resetgame();
                 Sudoku.setlevel(18);
                 Sudoku.newGame();
                 counter = 0;
@@ -145,7 +92,7 @@ public class Tampilan extends javax.swing.JPanel {
         medBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                restgame();
+                resetgame();
                 Sudoku.setlevel(8);
                 Sudoku.newGame();
                 counter = 0;
@@ -160,7 +107,7 @@ public class Tampilan extends javax.swing.JPanel {
         hardBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                restgame();
+                resetgame();
                 Sudoku.setlevel(3);
                 Sudoku.newGame();
                 counter = 0;
@@ -174,7 +121,7 @@ public class Tampilan extends javax.swing.JPanel {
         resetBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                restgame();
+                resetgame();
                 Sudoku.newGame();
                 counter = 0;
             }
@@ -202,7 +149,7 @@ public class Tampilan extends javax.swing.JPanel {
                         if (!boxes[i][j].isEditable()) {
                             continue;
                         } else if (boxes[i][j].getText().equals(String.valueOf(grid[i][j]))) {
-                            boxes[i][j].setBackground(Color.decode("#C0DCD9"));
+                            boxes[i][j].setBackground(Color.green);
                         } else if (boxes[i][j].getText().isEmpty()) {
                             boxes[i][j].setBackground(Color.WHITE);
                             continue;
@@ -289,7 +236,7 @@ public class Tampilan extends javax.swing.JPanel {
         }
     }
     
-    public static void restgame() {
+    public static void resetgame() {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 boxes[i][j].setForeground(Color.black);

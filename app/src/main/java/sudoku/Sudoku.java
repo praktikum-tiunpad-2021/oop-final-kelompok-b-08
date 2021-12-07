@@ -139,7 +139,7 @@ public class Sudoku {
 
     public static boolean isAvailable(int i, int j, int[][] grid) {
 
-        // Melakukan pemeriksaan row
+        // Melakukan pemeriksaan kolom
         for (int column = 0; column < 9; column++) {
             if (column != j && grid[i][column] == grid[i][j]) {
                 return false;
