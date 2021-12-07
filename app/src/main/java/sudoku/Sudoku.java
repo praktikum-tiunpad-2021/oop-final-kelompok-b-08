@@ -46,7 +46,7 @@ public class Sudoku {
         }
 
         if (search(grid)) {
-            System.out.println("OK !!");
+            System.out.println("OK!");
         }
         int rann = ran.nextInt(level);
         int c = 0;
