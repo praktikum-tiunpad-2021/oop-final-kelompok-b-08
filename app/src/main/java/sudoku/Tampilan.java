@@ -135,7 +135,7 @@ public class Tampilan extends javax.swing.JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 restgame();
-                Sudoku.setlevel(4);
+                Sudoku.setlevel(18);
                 Sudoku.newGame();
                 counter = 0;
             }
@@ -148,7 +148,7 @@ public class Tampilan extends javax.swing.JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 restgame();
-                Sudoku.setlevel(3);
+                Sudoku.setlevel(8);
                 Sudoku.newGame();
                 counter = 0;
 
@@ -163,7 +163,7 @@ public class Tampilan extends javax.swing.JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 restgame();
-                Sudoku.setlevel(2);
+                Sudoku.setlevel(3);
                 Sudoku.newGame();
                 counter = 0;
             }

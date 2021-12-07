@@ -12,7 +12,7 @@ public class Sudoku {
     private  static int[][] grid;
     private static int[][] temp;
     private static Random ran = new Random();
-    private static int level = 2;
+    private static int level = 3;
     
     public static void main(String[] args){
         grid = new int[9][9];
